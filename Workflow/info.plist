@@ -723,39 +723,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.transform</string>
-			<key>uid</key>
-			<string>ADBE953B-B335-42B1-8D94-42E9EFF6A717</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>{query}</string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict>
-					<key>raw_url</key>
-					<string>{query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>5EE4530F-5A12-49D4-A883-85070CAA0EBA</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>conditions</key>
 				<array>
 					<dict>
@@ -782,6 +749,39 @@
 			<string>alfred.workflow.utility.conditional</string>
 			<key>uid</key>
 			<string>012A1EFC-9C95-47E0-8231-534FF492523A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>raw_url</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>5EE4530F-5A12-49D4-A883-85070CAA0EBA</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.transform</string>
+			<key>uid</key>
+			<string>ADBE953B-B335-42B1-8D94-42E9EFF6A717</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -943,7 +943,7 @@ Open the [Internet Archive’s](https://archive.org/) most recent web page snaps
 
 ![Open wayback machine](images/about/wayback.png)
 
-* &lt;kbd&gt;↩&lt;/kbd&gt; Open page. if no snapshot exists, fallback to the action in the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/).
+* &lt;kbd&gt;↩&lt;/kbd&gt; Open page. If no snapshot exists, fallback to the action in the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/).
 * &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Show all snapshots.
 * &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Force fallback.
 
