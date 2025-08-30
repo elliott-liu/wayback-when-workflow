@@ -10,9 +10,9 @@ Open the [Internet Archive’s](https://archive.org/) most recent web page snaps
 
 ![Open wayback machine](Workflow/images/about/wayback.png)
 
-* <kbd>↩&#xFE0E;</kbd> Open page. if no snapshot exists, fallback to the action in the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/).
-* <kbd>⌘</kbd><kbd>↩&#xFE0E;</kbd> Show all snapshots.
-* <kbd>⌥</kbd><kbd>↩&#xFE0E;</kbd> Force fallback.
+* <kbd>↩</kbd> Open page. If no snapshot exists, fallback to the action in the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/).
+* <kbd>⌘</kbd><kbd>↩</kbd> Show all snapshots.
+* <kbd>⌥</kbd><kbd>↩</kbd> Force fallback.
 
 Alternatively, perform the same actions from a selection or [Clipboard History](https://www.alfredapp.com/help/features/clipboard/) with the [Universal Action](https://www.alfredapp.com/help/features/universal-actions/).
 
