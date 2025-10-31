@@ -4,6 +4,7 @@
 <dict>
 	<key>bundleid</key>
 	<string>com.alfredapp.vitor.waybackwhen</string>
+	<key>connections</key>
 	<dict>
 		<key>012A1EFC-9C95-47E0-8231-534FF492523A</key>
 		<array>
