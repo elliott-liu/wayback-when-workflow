@@ -661,7 +661,7 @@ return JSON.parse(argv[0])["archived_snapshots"]["closest"]["url"]
 				<key>skipuniversalaction</key>
 				<true/>
 				<key>subtext</key>
-				<string>Open latest snapshot of the frontmost browser tab on the Wayback Machine</string>
+				<string>Open latest snapshot on the Wayback Machine</string>
 				<key>text</key>
 				<string>{const:alfred_workflow_name}</string>
 				<key>withspace</key>
