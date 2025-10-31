@@ -140,7 +140,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>13251B98-7B2B-4CBF-8FA2-5A323AE5093A</string>
+				<string>5DC3988F-788F-4B9D-8500-A5B90CFE02B7</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -163,7 +163,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>13251B98-7B2B-4CBF-8FA2-5A323AE5093A</string>
+				<string>5DC3988F-788F-4B9D-8500-A5B90CFE02B7</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -187,6 +187,31 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>C2C2DFB7-F654-496F-9A9B-A07E08129686</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>5DC3988F-788F-4B9D-8500-A5B90CFE02B7</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5EE4530F-5A12-49D4-A883-85070CAA0EBA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>A27DA0B8-5F55-4795-93F3-44445CBC8C59</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>13251B98-7B2B-4CBF-8FA2-5A323AE5093A</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -278,7 +303,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>13251B98-7B2B-4CBF-8FA2-5A323AE5093A</string>
+				<string>5DC3988F-788F-4B9D-8500-A5B90CFE02B7</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -562,9 +587,9 @@
 				<integer>68</integer>
 				<key>script</key>
 				<string>function run(argv) {
-  const snapshots = JSON.parse(argv[0])["archived_snapshots"]
-  if (Object.keys(snapshots).length === 0) throw "No snapshots found"
-  return JSON.parse(argv[0])["archived_snapshots"]["closest"]["url"]
+const snapshots = JSON.parse(argv[0])["archived_snapshots"]
+if (Object.keys(snapshots).length === 0) throw "No snapshots found"
+return JSON.parse(argv[0])["archived_snapshots"]["closest"]["url"]
 }</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -621,23 +646,8 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>tasksettings</key>
-				<dict/>
-				<key>taskuid</key>
-				<string>com.alfredapp.automation.extras/web-browsers/frontmost-browser/frontmost.tabs.current</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.automation.task</string>
-			<key>uid</key>
-			<string>13251B98-7B2B-4CBF-8FA2-5A323AE5093A</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argumenttype</key>
-				<integer>2</integer>
+				<integer>1</integer>
 				<key>keyword</key>
 				<string>{var:wayback_keyword}</string>
 				<key>skipuniversalaction</key>
@@ -647,7 +657,7 @@
 				<key>text</key>
 				<string>{const:alfred_workflow_name}</string>
 				<key>withspace</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.keyword</string>
@@ -723,6 +733,26 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>raw_url</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>5EE4530F-5A12-49D4-A883-85070CAA0EBA</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>conditions</key>
 				<array>
 					<dict>
@@ -755,26 +785,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
-				<string>{query}</string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict>
-					<key>raw_url</key>
-					<string>{query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>5EE4530F-5A12-49D4-A883-85070CAA0EBA</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -782,6 +792,53 @@
 			<string>alfred.workflow.utility.transform</string>
 			<key>uid</key>
 			<string>ADBE953B-B335-42B1-8D94-42E9EFF6A717</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>5</integer>
+						<key>matchstring</key>
+						<string></string>
+						<key>outputlabel</key>
+						<string>Query URL</string>
+						<key>uid</key>
+						<string>A27DA0B8-5F55-4795-93F3-44445CBC8C59</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>Current Front Browser</string>
+				<key>hideelse</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>5DC3988F-788F-4B9D-8500-A5B90CFE02B7</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>tasksettings</key>
+				<dict/>
+				<key>taskuid</key>
+				<string>com.alfredapp.automation.extras/web-browsers/frontmost-browser/frontmost.tabs.current</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.automation.task</string>
+			<key>uid</key>
+			<string>13251B98-7B2B-4CBF-8FA2-5A323AE5093A</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -939,7 +996,9 @@
 	<key>readme</key>
 	<string>## Usage
 
-Open the [Internet Archive’s](https://archive.org/) most recent web page snapshot for the frontmost browser tab via the `wayback` keyword.
+Open the [Internet Archive’s](https://archive.org/) most recent web page snapshot via the `wayback` keyword. 
+
+If no argument is provided the frontmost browser tab is used as the query.
 
 ![Open wayback machine](images/about/wayback.png)
 
@@ -955,51 +1014,51 @@ Alternatively, perform the same actions from a selection or [Clipboard History](
 		<key>012A1EFC-9C95-47E0-8231-534FF492523A</key>
 		<dict>
 			<key>xpos</key>
-			<real>1425</real>
+			<real>1545</real>
 			<key>ypos</key>
 			<real>335</real>
 		</dict>
 		<key>0491E315-3047-428F-9126-09CF81C15444</key>
 		<dict>
 			<key>xpos</key>
-			<real>1700</real>
+			<real>1820</real>
 			<key>ypos</key>
 			<real>380</real>
 		</dict>
 		<key>13251B98-7B2B-4CBF-8FA2-5A323AE5093A</key>
 		<dict>
 			<key>xpos</key>
-			<real>325</real>
+			<real>450</real>
 			<key>ypos</key>
-			<real>305</real>
+			<real>380</real>
 		</dict>
 		<key>18445900-A2C2-41E2-9D35-4320D0BFA220</key>
 		<dict>
 			<key>note</key>
 			<string>Parse JSON</string>
 			<key>xpos</key>
-			<real>1180</real>
+			<real>1300</real>
 			<key>ypos</key>
 			<real>305</real>
 		</dict>
 		<key>1E6106DD-5612-4FFC-B7BB-6A47334195A0</key>
 		<dict>
 			<key>xpos</key>
-			<real>560</real>
+			<real>680</real>
 			<key>ypos</key>
 			<real>325</real>
 		</dict>
 		<key>41D7AC8B-8807-4D3F-9A58-1344D2FC4C17</key>
 		<dict>
 			<key>xpos</key>
-			<real>875</real>
+			<real>995</real>
 			<key>ypos</key>
 			<real>125</real>
 		</dict>
 		<key>438D4B8F-25A3-41E5-8D7F-972D8664A417</key>
 		<dict>
 			<key>xpos</key>
-			<real>365</real>
+			<real>485</real>
 			<key>ypos</key>
 			<real>120</real>
 		</dict>
@@ -1008,126 +1067,133 @@ Alternatively, perform the same actions from a selection or [Clipboard History](
 			<key>note</key>
 			<string>Make web request</string>
 			<key>xpos</key>
-			<real>1005</real>
+			<real>1125</real>
 			<key>ypos</key>
 			<real>305</real>
 		</dict>
 		<key>4B6071DA-2D18-4562-8A18-BF605B613C19</key>
 		<dict>
 			<key>xpos</key>
-			<real>245</real>
+			<real>190</real>
 			<key>ypos</key>
-			<real>265</real>
+			<real>280</real>
 		</dict>
 		<key>4F64AE48-EA7D-410B-B012-31D7119B74FC</key>
 		<dict>
 			<key>xpos</key>
-			<real>85</real>
+			<real>30</real>
 			<key>ypos</key>
-			<real>305</real>
+			<real>320</real>
 		</dict>
 		<key>5B0D7A33-88D9-47A7-8668-F50F204C7BC7</key>
 		<dict>
 			<key>xpos</key>
-			<real>1700</real>
+			<real>1820</real>
 			<key>ypos</key>
 			<real>445</real>
+		</dict>
+		<key>5DC3988F-788F-4B9D-8500-A5B90CFE02B7</key>
+		<dict>
+			<key>xpos</key>
+			<real>265</real>
+			<key>ypos</key>
+			<real>340</real>
 		</dict>
 		<key>5E027D88-0F1F-4B6A-B190-0D81A891F357</key>
 		<dict>
 			<key>xpos</key>
-			<real>1520</real>
+			<real>1640</real>
 			<key>ypos</key>
 			<real>420</real>
 		</dict>
 		<key>5EE4530F-5A12-49D4-A883-85070CAA0EBA</key>
 		<dict>
 			<key>xpos</key>
-			<real>490</real>
+			<real>610</real>
 			<key>ypos</key>
 			<real>335</real>
 		</dict>
 		<key>7430AE48-1AF9-4F5F-B151-065A3EA73C66</key>
 		<dict>
 			<key>xpos</key>
-			<real>245</real>
+			<real>190</real>
 			<key>ypos</key>
 			<real>50</real>
 		</dict>
 		<key>771D562E-32F3-4D56-9FD5-23067F599C49</key>
 		<dict>
 			<key>xpos</key>
-			<real>835</real>
+			<real>955</real>
 			<key>ypos</key>
 			<real>305</real>
 		</dict>
 		<key>8CBF9369-6B71-4683-9658-9815A4299B21</key>
 		<dict>
 			<key>xpos</key>
-			<real>710</real>
+			<real>830</real>
 			<key>ypos</key>
 			<real>445</real>
 		</dict>
 		<key>9488B036-32FA-4E39-ADA8-FD4B86BF3B04</key>
 		<dict>
 			<key>xpos</key>
-			<real>245</real>
+			<real>190</real>
 			<key>ypos</key>
-			<real>405</real>
+			<real>420</real>
 		</dict>
 		<key>AD1D5EF8-DA3E-4CB0-8D90-1EDDC34A43D3</key>
 		<dict>
 			<key>xpos</key>
-			<real>1515</real>
+			<real>1635</real>
 			<key>ypos</key>
 			<real>545</real>
 		</dict>
 		<key>ADBE953B-B335-42B1-8D94-42E9EFF6A717</key>
 		<dict>
 			<key>xpos</key>
-			<real>1335</real>
+			<real>1455</real>
 			<key>ypos</key>
 			<real>335</real>
 		</dict>
 		<key>B5503E8C-92BD-4905-AA1C-CC6A094B8149</key>
 		<dict>
 			<key>xpos</key>
-			<real>1665</real>
+			<real>1785</real>
 			<key>ypos</key>
 			<real>545</real>
 		</dict>
 		<key>BDF9FA7A-E5AE-4024-865B-EC2E0163711C</key>
 		<dict>
 			<key>xpos</key>
-			<real>245</real>
+			<real>190</real>
 			<key>ypos</key>
 			<real>190</real>
 		</dict>
 		<key>C2C2DFB7-F654-496F-9A9B-A07E08129686</key>
 		<dict>
 			<key>xpos</key>
-			<real>1785</real>
+			<real>1905</real>
 			<key>ypos</key>
 			<real>90</real>
 		</dict>
 		<key>C5BB0702-89CA-4F35-BAF2-26376E9340F4</key>
 		<dict>
 			<key>xpos</key>
-			<real>85</real>
+			<real>30</real>
 			<key>ypos</key>
 			<real>90</real>
 		</dict>
 		<key>D71BC29A-B78D-48CD-8285-935CC61E7023</key>
 		<dict>
 			<key>xpos</key>
-			<real>1425</real>
+			<real>1545</real>
 			<key>ypos</key>
 			<real>265</real>
 		</dict>
 		<key>EBAC5B8C-FC5E-4AA6-9E18-025380BEEF22</key>
 		<dict>
 			<key>xpos</key>
-			<real>675</real>
+			<real>795</real>
 			<key>ypos</key>
 			<real>325</real>
 		</dict>
