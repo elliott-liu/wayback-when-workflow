@@ -6,7 +6,9 @@ Open Websites on the Internet Archive’s Wayback Machine
 
 ## Usage
 
-Open the [Internet Archive’s](https://archive.org/) most recent web page snapshot for the frontmost browser tab via the `wayback` keyword.
+Open the [Internet Archive’s](https://archive.org/) most recent web page snapshot via the `wayback` keyword.
+
+If no argument is provided the frontmost browser tab is used as the query.
 
 ![Open wayback machine](Workflow/images/about/wayback.png)
 
